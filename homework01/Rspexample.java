@@ -3,7 +3,7 @@ package homework01;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Example {
+public class Rspexample {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		while(true) {
