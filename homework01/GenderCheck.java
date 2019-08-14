@@ -2,7 +2,7 @@ package homework01;
 
 import java.util.Scanner;
 
-public class IdScanner {
+public class GenderCheck {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("주민번호를 입력하세요. (-)미포함");
