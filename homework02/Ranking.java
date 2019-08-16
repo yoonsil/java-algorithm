@@ -24,14 +24,9 @@ public class Ranking {
 		Scanner scan = new Scanner(System.in);
 		String[] name = {"A","B","C"};
 		float[] time = new float[3]; 
-		String seq = "";
 		String fir = "";
 		String sec ="";
-		String thi = "";
-		float fir1 =0.0f;
-		float sec2 =0.0f;
-		float thi3 =0.0f;
-		
+		String thi = "";	
 		//기록입력
 		for(int i=0; i<name.length; i++) {
 			System.out.printf("%s선수 기록을 입력하세요.\n", name[i]);
