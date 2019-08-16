@@ -12,18 +12,14 @@ public class TimeCalc {
 	int min =0;
 	int sec =0;
 	while(true) {
-		System.out.println("1.계산 2.종료");
-		int op = scan.nextInt();
-		switch(op) {
-		case 1:
-			System.out.println("계산할 시간값(초)을 입력하세요.");
-			int time = scan.nextInt();
+		System.out.println("계산할 시간값(초)을 입력하세요. 1.종료");
+		int time = scan.nextInt();
+		if(time==1) {
+			return;
+			}
 			min = time/60;
 			sec = time%60;
 			System.out.println(String.format("%d분 %d초 입니다.",min,sec));
-			break;
-		case 2: return;
-			}
 		}
 	}
 }

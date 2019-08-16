@@ -46,8 +46,10 @@ public class Join {
 		//성인여부체크
 		if(info[4].equals("true")) {
 			check = "성인";
-		}else{
+		}else if(info[4].equals("false")){
 			check ="미성년";
+		}else {
+			check = "잘못입력하셨습니다.";
 		}
 		//출력값설정
 		info[4] = String.format("%s", check);

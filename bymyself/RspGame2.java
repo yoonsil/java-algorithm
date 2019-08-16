@@ -22,6 +22,7 @@ public class RspGame2 {
 					case "가위": result = "무"; break;
 					case "바위": result = "승"; break;
 					case "보": result = "패"; break;
+					default : result ="제대로써 새끼야"; break;
 					}
 				break;
 				case 2: computer = "바위"; 
@@ -29,6 +30,7 @@ public class RspGame2 {
 					case "가위": result ="패"; break;
 					case "바위": result ="무"; break;
 					case "보": result ="승"; break;
+					default : result ="제대로써 새끼야"; break;
 					}
 				break;
 				case 3: computer = "보"; 
@@ -36,6 +38,7 @@ public class RspGame2 {
 					case "가위": result ="승"; break;
 					case "바위": result ="패"; break;
 					case "보": result ="무"; break;
+					default : result ="제대로써 새끼야"; break;
 					}
 				break;
 					}
