@@ -25,6 +25,7 @@ public class OddSequence {
 				}else {
 					end2 = end;
 				}
+				
 				if(i!=end2) {
 					seq += i+ "+";
 				}else {
