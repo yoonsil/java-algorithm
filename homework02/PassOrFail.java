@@ -27,17 +27,15 @@ public class PassOrFail {
 		//이름입력
 			System.out.printf("%s입력하세요.\n",subjects[0]);
 			input[0] = scan.next();
-		//점수입력	+총점계산
+		//점수입력+총점계산
 		for(int i=1; i<=3; i++) {
 			System.out.printf("%s입력하세요.\n",subjects[i]);
 			input[i] = scan.next();
 			scores += Integer.parseInt(input[i]);
 			}		
-		
 		//평균계산
 		int avg = scores/3; 
 		input[5] = String.valueOf(avg);
-		
 		//index값 지정
 		input[4] = String.valueOf(scores);
 		input[6] = String.valueOf(avg);

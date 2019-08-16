@@ -11,8 +11,9 @@ package homework02;
 	10 / 3 = 3 [1] 나눗셈은 이렇게 나오면 된답니다.
 	그러면 []값이 나머지인지는 교수가 이미 알고 있겠답니다.
  */
+import java.util.Scanner;
 public class ArithmeticCalculator {
 	public static void main(String[] args) {
-		
+		Scanner scan = new Scanner(System.in);
 	}
 }

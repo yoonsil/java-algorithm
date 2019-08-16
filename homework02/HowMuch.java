@@ -15,7 +15,7 @@ package homework02;
 	total = total - dc;
 	
  */
-
+import java.util.Scanner;
 public class HowMuch {
 	public static void main(String[] args) {
 		

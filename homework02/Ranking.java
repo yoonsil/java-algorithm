@@ -34,23 +34,23 @@ public class Ranking {
 		}		
 		//순서정하기
 		for(int i = 0; i<time.length; i++) {
-			if(time[0]<time[1]&&time[1]<time[2]&&time[0]<time[2]){
-				fir = String.format("1등 : C선수 (%.1f)",time[0]);
-				sec = String.format("2등 : B선수 (%.1f)",time[1]);
-				thi = String.format("3등 : A선수 (%.1f)",time[2]);
-			}else if(time[0]>time[1]&&time[1]<time[2]&&time[0]<time[2]) {
-				fir = String.format("1등 : C선수 (%.1f)",time[1]);
-				sec = String.format("2등 : A선수 (%.1f)",time[0]);
-				thi = String.format("3등 : B선수 (%.1f)",time[2]);
-			}else if(time[0]>time[2]&&time[1]>time[2]&&time[1]<time[0]) {
-				fir = String.format("1등 : A선수 (%.1f)",time[2]);
-				sec = String.format("2등 : B선수 (%.1f)",time[1]);
-				thi = String.format("3등 : C선수 (%.1f)",time[0]);				
+			if(time[0]<time[1] && time[1]<time[2] && time[0]<time[2]){
+				fir = String.format("1등 : A선수 (%.1f초)",time[0]);
+				sec = String.format("2등 : B선수 (%.1f초)",time[1]);
+				thi = String.format("3등 : C선수 (%.1f초)",time[2]);
+			}else if(time[2]<time[0] && time[2]<time[1] && time[0]<time[1]) {
+				fir = String.format("1등 : C선수 (%.1f초)",time[2]);
+				sec = String.format("2등 : A선수 (%.1f초)",time[0]);
+				thi = String.format("3등 : B선수 (%.1f초)",time[1]);
+			}else if(time[1]<time[2] && time[1]<time[0] && time[2]<time[0]) {
+				fir = String.format("1등 : B선수 (%.1f초)",time[1]);
+				sec = String.format("2등 : C선수 (%.1f초)",time[2]);
+				thi = String.format("3등 : A선수 (%.1f초)",time[0]);				
 			}
 		}
 		//출력	
-			System.out.printf("%s\n",fir);
-			System.out.printf("%s\n",sec);
-			System.out.printf("%s\n",thi);			
+		System.out.printf("%s\n",fir);
+		System.out.printf("%s\n",sec);
+		System.out.printf("%s\n",thi);			
 	}
 }
