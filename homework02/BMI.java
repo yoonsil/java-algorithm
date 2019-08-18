@@ -29,9 +29,6 @@ public class BMI {
 		float height = Float.parseFloat(get[1]);
 		float weight = Float.parseFloat(get[2]);
 		
-//		System.out.println(height);
-//		System.out.println(weight);
-//		System.out.println(height/100);
 		//계산
 		float bmi =weight/((height/100)*(height/100));
 		String result ="";
@@ -47,12 +44,6 @@ public class BMI {
 		}else {
 			result="저체중";
 		}
-//		(bmi > 30.0) 고도비만
-//		(bmi > 25.0) 비만
-//		(bmi > 23.0) 과체중
-//		(bmi > 18.5) 정상
-//		저체중		
-		
 		
 		//출력
 		System.out.printf("%.1f (%s)",bmi,result);
