@@ -26,6 +26,7 @@ public class ScoreCalc {
 		Scanner scan = new Scanner(System.in);
 		int series=0;
 		String seq = "";
+		int count = 0;
 		int avg = 0;
 		while(true) {
 			System.out.println("더할 수를 입력하세요. -1.종료");
@@ -34,14 +35,12 @@ public class ScoreCalc {
 				System.out.printf("%s = %d이고 평균은 %d입니다.",seq,series,avg );
 				return;
 			}
-				for(int i =add; i<=add; i++) {
-					if(i==add) {
-						seq += add +"+";
-					}else {
-						seq += add + "=";
-					}
-				}
-				series += add;
+			seq += add;
+			series += add;
+			count++;
+			avg = series/count;
+
+				
 			}
 		}//while
 	}
