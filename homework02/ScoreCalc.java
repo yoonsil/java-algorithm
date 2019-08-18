@@ -26,26 +26,22 @@ public class ScoreCalc {
 		Scanner scan = new Scanner(System.in);
 		int series=0;
 		String seq = "";
-		
+		int avg = 0;
 		while(true) {
 			System.out.println("더할 수를 입력하세요. -1.종료");
-			int op = scan.nextInt();
-			for(int i =op; i<=op; i++) {
-				if(i!=op) {
-					seq += i+ "=";
-				}else {
-					seq += i+ "+";					
-				}
-			}//for
-			//메인 메소드 종료
-			if(op==-1) {
-				for(int i =0; i<=op; i++) {
-				series += op;
-					}
-				System.out.println(seq+series);
+			int add = scan.nextInt();
+			if(add == -1) {
+				System.out.printf("%s = %d이고 평균은 %d입니다.",seq,series,avg );
 				return;
-				}			
-			}//while
-			
-		}
+			}
+				for(int i =add; i<=add; i++) {
+					if(i==add) {
+						seq += add +"+";
+					}else {
+						seq += add + "=";
+					}
+				}
+				series += add;
+			}
+		}//while
 	}

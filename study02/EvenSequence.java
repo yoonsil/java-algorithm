@@ -26,8 +26,8 @@ public class EvenSequence {
 				}
 				//==============
 				series += i;		
-			}
-		}
+			}//outer if
+		}//for
 		System.out.println(sequence + series);
 	}
 }
