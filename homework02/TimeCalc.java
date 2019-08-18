@@ -11,15 +11,17 @@ public class TimeCalc {
 	Scanner scan = new Scanner(System.in);
 	int min =0;
 	int sec =0;
+	int hour =0;
 	while(true) {
 		System.out.println("계산할 시간값(초)을 입력하세요. 1.종료");
 		int time = scan.nextInt();
 		if(time==1) {
 			return;
 			}
-			min = time/60;
+			hour = time/3600;
+			min = (time%3600)/60;
 			sec = time%60;
-			System.out.println(String.format("%d분 %d초 입니다.",min,sec));
+			System.out.println(String.format("%d시 %d분 %d초 입니다.",hour,min,sec));
 		}
 	}
 }
