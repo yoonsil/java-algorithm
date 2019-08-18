@@ -15,5 +15,26 @@ import java.util.Scanner;
 public class ArithmeticCalculator {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		int result =0;
+		//입력
+		System.out.println("첫번째 수를 입력하세요.");
+		int fir = scan.nextInt();
+		System.out.println("두번쩨 수를 입력하세요.");
+		int sec = scan.nextInt();
+		System.out.println("사칙연산(+,-,x,/)중 하나를 선택하세요.");
+		String symbol = scan.next();
+		//계산
+		switch(symbol) {
+		case "+" :result =fir+sec; break;
+		case "-" :result =fir-sec; break;
+		case "x" :result =fir*sec; break;
+		case "/" :result =fir/sec; break;
+		}
+		if(symbol.equals("/")) {
+			System.out.printf("%d %s %d = %d[%d]",fir,symbol,sec,result,fir%sec);						
+		}else {
+			System.out.printf("%d %s %d = %d",fir,symbol,sec,result);			
+		}
+		//출력
 	}
 }
