@@ -56,6 +56,7 @@ public class Join {
 		info[5] = String.format("%s cm", info[5]);
 		info[6] = String.format("%s kg", info[6]);
 		info[7] = String.format("%s 형", info[7]);
+		
 		//출력
 		for(int i=0; i<info.length; i++) {
 			System.out.println(join[i]+info[i]);		

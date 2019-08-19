@@ -25,7 +25,8 @@ public class HowMuch {
 		int amount = scan.nextInt();
 		int total = price * amount;  
 		//출력
-		System.out.printf("%d개 주세요.\n총금액은 %d 입니다.\n",amount,total);
+		System.out.printf("%d개 주세요.\n총금액은 %d 입니"
+				+ "다.\n",amount,total);
 		while(true) {
 			System.out.println("비싸요, ___%만 깎아 주세요.");
 			int ask = scan.nextInt();

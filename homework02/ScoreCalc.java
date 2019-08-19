@@ -35,6 +35,7 @@ public class ScoreCalc {
 				System.out.printf("%s = %d이고 평균은 %d입니다.",seq,series,avg );
 				return;
 			}
+			
 			seq += add;
 			series += add;
 			count++;

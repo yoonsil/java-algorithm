@@ -30,6 +30,7 @@ public class ArithmeticCalculator {
 		case "x" :result =fir*sec; break;
 		case "/" :result =fir/sec; break;
 		}
+		
 		if(symbol.equals("/")) {
 			System.out.printf("%d %s %d = %d[%d]",fir,symbol,sec,result,fir%sec);						
 		}else {
