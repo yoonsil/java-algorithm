@@ -3,7 +3,7 @@ package study05.oop;
 public class Member {
 	private String id, pw, name, ssn, blood;
 	private double height, weight;
-	private int kor, tax;
+	private int kor, eng, math, tax;
 	
 	//this ->field property
 	
@@ -56,6 +56,19 @@ public class Member {
 	public int getKor() {
 		return this.kor;
 	}
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+	public int getEng() {
+		return this.eng;
+	}
+	public void setMath(int math) {
+		this.math = math;
+	}
+	public int getMath() {
+		return this.math;
+	}
+	
 	//------------------------
 	public void setTax(int tax) {
 		this.tax = tax;
@@ -64,6 +77,8 @@ public class Member {
 		return this.tax;
 	}
 	
+	//------------------------------
+	
 	@Override
 	public String toString() {
 		return String.format("회원정보: \n"
@@ -71,11 +86,15 @@ public class Member {
 				+ "비밀번호: %s\n"
 				+ "이름: %s\n"
 				+ "주민번호: %s\n"
-				+ "키: %s\n"
-				+ "몸무게: %s\n"
-				+ "헐액형: %s\n"
+				+ "키: %s cm\n"
+				+ "몸무게: %s kg\n"
+				+ "헐액형: %s 형\n"
+				+ "국어점수: %d\n"
+				+ "영어점수: %d\n"
+				+ "수학점수: %d\n"
+				+ "연봉: %d\n"
 				,id, pw, name, ssn, 
-				height, weight, blood);
+				height, weight, blood,kor,eng,math,tax);
 	}
 }
 
