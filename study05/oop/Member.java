@@ -79,6 +79,7 @@ public class Member {
 	
 	//------------------------------
 	
+	
 	@Override
 	public String toString() {
 		return String.format("회원정보: \n"
