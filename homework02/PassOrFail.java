@@ -18,11 +18,10 @@ public class PassOrFail {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		//배열생성
-		String[] subjects = {"이름","국어","영어","수학","총점","평균","합격여부"};
 		String[] input = new String[7];
-
-		int scores =0;	
+		String[] subjects = {"이름","국어","영어","수학","총점","평균","합격여부"};
 		String name =String.valueOf(input[0]);
+		int scores =0;	
 	
 		//이름입력
 			System.out.printf("%s입력하세요.\n",subjects[0]);

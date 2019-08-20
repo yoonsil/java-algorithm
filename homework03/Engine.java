@@ -6,9 +6,9 @@ public class Engine {
 		Student std = new Student();
 		String result ="";
 		while(true) {
-			System.out.println("0.종료 1.AC 2.BMI 3.How much 4.Join\n"
-					+ "5.Leap Year 6.MonthEndDay 7.PassOrFail 8.Ranking\n"
-					+ "9.ReportCard 10.ScoreCalc 11.Tax 12.TimeCalc\n");
+			System.out.println("0.종료\n1.AC\n2.BMI\n3.How much\n4.Join\n"
+					+ "5.Leap Year\n6.MonthEndDay \n7.PassOrFail \n8.Ranking\n"
+					+ "9.ReportCard\n10.ScoreCalc \n11.Tax \n12.TimeCalc\n");
 			switch(scan.nextInt()) {
 			case 0: System.out.println("종료");
 			return;
@@ -62,44 +62,97 @@ public class Engine {
 					}
 				}				
 				//-------------------------------------
-			case 4: //join
+			case 4: //join (****)
 				System.out.println("==============회원가입==============");
-				String[] join = {"아이디: ","비밀번호: ","이름: ","생년월일(예)1980-01-01:",
-						"성인여부(성인true,미성년false): ","키(소수점첫째자리까지): ","몸무게(소수점 첫째 자리까지): ","헐액형(A): "};
-				String[] info = new String[8];
-				for(int i=0; i<8; i++) {
-					System.out.printf("%s",join[i]);
-					info[i] = scan.next();
-				}
-				result = std.getJoin(info);
+				System.out.println("아이디");
+				String id = scan.next();
+				System.out.println("비번");
+				String pw = scan.next();
+				System.out.println("이름");
+				name = scan.next();
+				System.out.println("생일");
+				String birth = scan.next();
+				System.out.println("성인 true, 미성년 false");
+				String adult = scan.next();
+				System.out.println("키");
+				height = scan.nextFloat();
+				System.out.println("몸무게");
+				weight = scan.nextFloat();
+				System.out.println("혈액형");
+				String blood = scan.next();
+				
+				result = std.getJoin(id, pw, name, birth, adult, height, weight, blood);
 				System.out.println(result);
 				break;
 				//-------------------------------------
 			case 5: //leap year
-				
+				System.out.println("연도를 입력하세요.");
+				int year = scan.nextInt();
+				result = std.getFeb(year);
+				System.out.println(result);
 				break;
 				//-------------------------------------
 			case 6: //month-end-day
-				
+				System.out.println("월을 입력하세요.");
+				int month=scan.nextInt();
+				result = std.getLastday(month);
+				System.out.println(result);
 				break;
 				//-------------------------------------
-			case 7: //PassOrFamil
-				
+			case 7: //PassOrFail
+				String[] subjects2 = {"이름","국어","영어","수학","총점","평균","합격여부"};
+				String[] input = new String[7];
+				System.out.printf("%s 입력하세요.",subjects2[0]);
+				input[0] = scan.next();
+				for(int i =1; i<=3; i++) {
+					System.out.printf("%s 입력하세요\n",subjects2[i]);
+					input[i] = scan.next();
+				}
+				result = std.getReportCard(input);
+				System.out.println("이름          국어          영어           수학          총점           평균          합격여부");
+				System.out.println(result);
 				break;
 			case 8: //Ranking
+				System.out.println("A선수 기록");
+				float A = scan.nextFloat();
+				System.out.println("B선수 기록");				
+				float B = scan.nextFloat();
+				System.out.println("C선수 기록");
+				float C = scan.nextFloat();
+				result = std.getRanking(A, B, C);
+				System.out.println(result);
 				
+				//array
 				break;
 			case 9: //ReportCard
-				
+				String[] subjects = {"이름","국어","영어","수학","총점","평균","합격여부"};
+				input = new String[7];
+				System.out.printf("%s 입력하세요.",subjects[0]);
+				input[0] = scan.next();
+				for(int i =1; i<=3; i++) {
+					System.out.printf("%s 입력하세요\n",subjects[i]);
+					input[i] = scan.next();
+				}
+				result = std.getReportCard(input);
+				System.out.println("이름        국어        영어         수학        총점        평균       합격여부");
+				System.out.println(result);
 				break;
 			case 10: //ScoreCalc
 				
 				break;
 			case 11: //Tax
-				
+				System.out.println("이름입력");
+				name = scan.next();
+				System.out.println("연봉입력 (4자리 ex)3000만원)");
+				int annual = scan.nextInt();
+				result = std.getTax(name, annual);
+				System.out.println(result);
 				break;
 			case 12: //TimeCalc
-				
+				System.out.println("시간입력");
+				int time = scan.nextInt();
+				result = std.getTime(time);
+				System.out.println(result);
 				break;
 			}
 		}
