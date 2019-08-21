@@ -1,4 +1,4 @@
-package study05.oop;
+package study06.oop;
 
 public class Member {//{
 	private String id, pw, name, ssn, blood; //instance 변수
@@ -89,10 +89,10 @@ public class Member {//{
 				+ "비밀번호: %s\n"
 				+ "이름: %s\n"
 				+ "주민번호: %s\n"
-				+ "키: %s cm\n"
+				+ "키: %.1f cm\n"
 		
 				
-				+ "몸무게: %s kg\n"
+				+ "몸무게: %.1f kg\n"
 				+ "헐액형: %s 형\n"
 				+ "국어점수: %d\n"
 				+ "영어점수: %d\n"

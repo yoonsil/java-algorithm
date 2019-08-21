@@ -1,6 +1,7 @@
-package study05.oop;
+package study06.oop;
 
 public class Service {
+	
 	public String getBmi(Member member) {
 		String result ="";
 		String name = member.getName(); //lv
@@ -46,7 +47,7 @@ public class Service {
 		int multi =10000;
 		double deduction = 0.097;
 		double taxfinal = (tax*multi)*deduction;
-		return String.format("연봉 %d받으시는 %s님 "
+		return String.format("연봉 %d0,000 받으시는 %s님 "
 				+ "납부할 세금은 %.0f원 입니다.",tax,name,taxfinal);
 	}
 }

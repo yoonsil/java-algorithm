@@ -2,9 +2,11 @@ package study05.oop;
 import java.util.Scanner;
 public class Engine {
 	public static void main(String[] args) {
+		
 		Scanner scan = new Scanner(System.in);
 		Member member = null;
 		Service service = new Service();
+		int a = Member.kor2;
 		while(true) {
 			System.out.println("0.종료 1.회원가입 2.정보보기 3.아이디찾기 4.BMI\n"
 					+ "5.Report Card 6.tax\n");
